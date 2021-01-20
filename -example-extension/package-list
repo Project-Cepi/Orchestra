@@ -2,4 +2,6 @@ $dokka.format:html-v1
 $dokka.linkExtension:html
 
 world.cepi.example
+world.cepi.example.model
+world.cepi.example.noteblock
 
