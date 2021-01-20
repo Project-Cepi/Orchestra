@@ -23,6 +23,6 @@ enum class Instrument {
             15.toByte() to PLING
         )
 
-        fun getInstrument(instrument: Byte): Instrument = instrumentBytes[instrument] ?: PIANO
+        fun getInstrument(instrument: Byte): Instrument = instrumentBytes[instrument] ?: throw NumberFormatException("Instrument must be between 0 and 15")
     }
 }
