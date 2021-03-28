@@ -1,4 +1,4 @@
-package world.cepi.example.model
+package world.cepi.orchestra.model
 
 import net.minestom.server.sound.Sound
 
