@@ -1,9 +1,8 @@
-package world.cepi.example.noteblock
+package world.cepi.orchestra.noteblock
 
 import net.minestom.server.entity.Player
-import net.minestom.server.sound.Sound
 import net.minestom.server.sound.SoundCategory
-import world.cepi.example.model.Instrument
+import world.cepi.orchestra.model.Instrument
 
 /**
  * Detailed info about a note. This is specifically a relative note,
