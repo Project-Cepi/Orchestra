@@ -3,7 +3,19 @@ $dokka.linkExtension:html
 $dokka.location:world.cepi.orchestra////PointingToDeclaration/-orchestra/world.cepi.orchestra/index.html
 $dokka.location:world.cepi.orchestra/Orchestra///PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/index.html
 $dokka.location:world.cepi.orchestra/Orchestra/Orchestra/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/-orchestra.html
+$dokka.location:world.cepi.orchestra/Orchestra/folderDir/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/folder-dir.html
 $dokka.location:world.cepi.orchestra/Orchestra/initialize/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/initialize.html
 $dokka.location:world.cepi.orchestra/Orchestra/terminate/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/terminate.html
+$dokka.location:world.cepi.orchestra/PlayCommand///PointingToDeclaration/-orchestra/world.cepi.orchestra/-play-command/index.html
+$dokka.location:world.cepi.orchestra/Song///PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/index.html
+$dokka.location:world.cepi.orchestra/Song/Song/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/-song.html
+$dokka.location:world.cepi.orchestra/Song/collectInfo/#java.io.File/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/collect-info.html
+$dokka.location:world.cepi.orchestra/SongHeader///PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/index.html
+$dokka.location:world.cepi.orchestra/SongHeader/SongHeader/#kotlin.Short#kotlin.Byte#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/-song-header.html
+$dokka.location:world.cepi.orchestra/SongHeader/formatBytes/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/format-bytes.html
+$dokka.location:world.cepi.orchestra/SongHeader/nbsVersion/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/nbs-version.html
+$dokka.location:world.cepi.orchestra/SongHeader/songLength/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/song-length.html
+$dokka.location:world.cepi.orchestra/SongHeader/toString/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/to-string.html
+$dokka.location:world.cepi.orchestra/SongHeader/vanillaInstrumentCount/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/vanilla-instrument-count.html
 world.cepi.orchestra
 
