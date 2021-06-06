@@ -1,5 +1,7 @@
 package world.cepi.orchestra.data.raw
 
+import java.io.DataInputStream
+
 data class RawSongHeader(
     val newFormat: Short,
     val nbsVersion: Byte,
@@ -23,4 +25,33 @@ data class RawSongHeader(
     val loop: Byte,
     val maxLoopCount: Byte,
     val loopStartTick: Short
-)
+) {
+    companion object {
+        fun fromDataStream(dataInputStream: DataInputStream) = with(dataInputStream) {
+            return@with RawSongHeader(
+                readShort(),
+                readByte(),
+                readByte(),
+                readShort(),
+                readShort(),
+                readUTF(),
+                readUTF(),
+                readUTF(),
+                readUTF(),
+                readShort(),
+                readByte(),
+                readByte(),
+                readByte(),
+                readInt(),
+                readInt(),
+                readInt(),
+                readInt(),
+                readInt(),
+                readUTF(),
+                readByte(),
+                readByte(),
+                readShort()
+            )
+        }
+    }
+}
