@@ -1,6 +1,59 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
+$dokka.location:world.cepi.orchestra.data.formatted////PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/index.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/-companion/index.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader.Companion/fromRawHeader/#world.cepi.orchestra.data.raw.RawSongHeader/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/-companion/from-raw-header.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/index.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/SongHeader/#kotlin.Byte#kotlin.Byte#kotlin.Short#kotlin.Short#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.Short#kotlin.Byte#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.String#kotlin.Byte#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/-song-header.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/layerCount/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/layer-count.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/leftClicks/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/left-clicks.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/loop/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/loop.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/loopStartTick/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/loop-start-tick.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/maxLoopCount/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/max-loop-count.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/midiOrSchematicFileName/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/midi-or-schematic-file-name.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/minutesSpent/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/minutes-spent.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/nbsVersion/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/nbs-version.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/noteBlocksAdded/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/note-blocks-added.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/noteBlocksRemoved/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/note-blocks-removed.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/rightClicks/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/right-clicks.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/songAuthor/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/song-author.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/songDescription/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/song-description.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/songLength/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/song-length.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/songName/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/song-name.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/songOriginalAuthor/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/song-original-author.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/songTempo/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/song-tempo.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/timeSignature/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/time-signature.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/vanillaInstrumentCount/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/vanilla-instrument-count.html
+$dokka.location:world.cepi.orchestra.data.raw////PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/index.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/-companion/index.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader.Companion/fromDataStream/#java.io.DataInputStream/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/-companion/from-data-stream.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/index.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/RawSongHeader/#kotlin.Short#kotlin.Byte#kotlin.Byte#kotlin.Short#kotlin.Short#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.Short#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.String#kotlin.Byte#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/-raw-song-header.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/autoSaving/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/auto-saving.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/autoSavingDuration/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/auto-saving-duration.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/layerCount/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/layer-count.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/leftClicks/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/left-clicks.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/loop/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/loop.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/loopStartTick/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/loop-start-tick.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/maxLoopCount/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/max-loop-count.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/midiOrSchematicFileName/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/midi-or-schematic-file-name.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/minutesSpent/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/minutes-spent.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/nbsVersion/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/nbs-version.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/newFormat/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/new-format.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/noteBlocksAdded/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/note-blocks-added.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/noteBlocksRemoved/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/note-blocks-removed.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/rightClicks/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/right-clicks.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/songAuthor/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/song-author.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/songDescription/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/song-description.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/songLength/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/song-length.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/songName/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/song-name.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/songOriginalAuthor/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/song-original-author.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/songTempo/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/song-tempo.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/timeSignature/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/time-signature.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/vanillaInstrumentCount/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/vanilla-instrument-count.html
 $dokka.location:world.cepi.orchestra////PointingToDeclaration/-orchestra/world.cepi.orchestra/index.html
+$dokka.location:world.cepi.orchestra/OldSongError///PointingToDeclaration/-orchestra/world.cepi.orchestra/-old-song-error/index.html
+$dokka.location:world.cepi.orchestra/OldSongError/OldSongError/#kotlin.String/PointingToDeclaration/-orchestra/world.cepi.orchestra/-old-song-error/-old-song-error.html
 $dokka.location:world.cepi.orchestra/Orchestra///PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/index.html
 $dokka.location:world.cepi.orchestra/Orchestra/Orchestra/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/-orchestra.html
 $dokka.location:world.cepi.orchestra/Orchestra/folderDir/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/folder-dir.html
@@ -10,12 +63,7 @@ $dokka.location:world.cepi.orchestra/PlayCommand///PointingToDeclaration/-orche
 $dokka.location:world.cepi.orchestra/Song///PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/index.html
 $dokka.location:world.cepi.orchestra/Song/Song/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/-song.html
 $dokka.location:world.cepi.orchestra/Song/collectInfo/#java.io.File/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/collect-info.html
-$dokka.location:world.cepi.orchestra/SongHeader///PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/index.html
-$dokka.location:world.cepi.orchestra/SongHeader/SongHeader/#kotlin.Short#kotlin.Byte#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/-song-header.html
-$dokka.location:world.cepi.orchestra/SongHeader/formatBytes/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/format-bytes.html
-$dokka.location:world.cepi.orchestra/SongHeader/nbsVersion/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/nbs-version.html
-$dokka.location:world.cepi.orchestra/SongHeader/songLength/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/song-length.html
-$dokka.location:world.cepi.orchestra/SongHeader/toString/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/to-string.html
-$dokka.location:world.cepi.orchestra/SongHeader/vanillaInstrumentCount/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song-header/vanilla-instrument-count.html
 world.cepi.orchestra
+world.cepi.orchestra.data.formatted
+world.cepi.orchestra.data.raw
 
