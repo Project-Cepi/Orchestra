@@ -1,5 +1,6 @@
 package world.cepi.orchestra.data.raw
 
+import world.cepi.orchestra.util.ConstructorStreamParser
 import java.io.DataInputStream
 
 data class RawSongHeader(
@@ -27,31 +28,6 @@ data class RawSongHeader(
     val loopStartTick: Short
 ) {
     companion object {
-        fun fromDataStream(dataInputStream: DataInputStream) = with(dataInputStream) {
-            return@with RawSongHeader(
-                readShort(),
-                readByte(),
-                readByte(),
-                readShort(),
-                readShort(),
-                readUTF(),
-                readUTF(),
-                readUTF(),
-                readUTF(),
-                readShort(),
-                readByte(),
-                readByte(),
-                readByte(),
-                readInt(),
-                readInt(),
-                readInt(),
-                readInt(),
-                readInt(),
-                readUTF(),
-                readByte(),
-                readByte(),
-                readShort()
-            )
-        }
+        fun fromDataStream(dataInputStream: DataInputStream) = ConstructorStreamParser.createInstance<RawSongHeader>(dataInputStream)
     }
 }

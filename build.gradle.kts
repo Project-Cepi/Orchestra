@@ -45,6 +45,9 @@ dependencies {
 
     // Add Kepi
     compileOnly("com.github.Project-Cepi:Kepi:c6ed2d6884")
+
+    // Use the JUpiter test library.
+    testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
 }
 
 tasks.withType<Test> {
