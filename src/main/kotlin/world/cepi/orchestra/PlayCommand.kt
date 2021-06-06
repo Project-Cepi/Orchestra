@@ -14,7 +14,7 @@ object PlayCommand: Command("orch"){
 
         addSyntax(play, songName) {player, args ->
             val p = player as Player
-            val file = File(Orchestra.plugin.folderDir + "\\${args.get(songName)}.nbs")
+            val file = File(Orchestra.folderDir + "\\${args.get(songName)}.nbs")
             if (file.exists()) {
 
                 // TODO should probably cache this
