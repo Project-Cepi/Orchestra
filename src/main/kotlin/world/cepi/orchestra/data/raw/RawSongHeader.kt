@@ -28,6 +28,6 @@ data class RawSongHeader(
     val loopStartTick: Short
 ) {
     companion object {
-        fun fromDataStream(dataInputStream: DataInputStream) = ConstructorStreamParser.createInstance<RawSongHeader>(dataInputStream)
+        fun fromDataStream(dataInputStream: DataInputStream) = ConstructorStreamParser.createInstance<RawSongHeader>(dataInputStream)!!
     }
 }
