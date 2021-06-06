@@ -1,19 +1,26 @@
 package world.cepi.orchestra
 
+import world.cepi.orchestra.data.formatted.SongHeader
 import world.cepi.orchestra.data.raw.RawSongHeader
 import java.io.DataInputStream
 import java.io.File
 import java.io.FileInputStream
-import java.io.IOException
 
-class Song {
-    fun collectInfo(file: File) {
-        try {
+class Song(
+    val songHeader: SongHeader
+) {
+
+    fun play() {
+
+    }
+
+    companion object {
+        fun collectInfo(file: File): Song {
             val inputStream = DataInputStream(FileInputStream(file))
 
-        } catch (ex: IOException) {
-            print(ex.stackTrace)
-        }
+            val songHeader = SongHeader.fromRawHeader(RawSongHeader.fromDataStream(inputStream))
 
+            return Song(songHeader)
+        }
     }
 }
