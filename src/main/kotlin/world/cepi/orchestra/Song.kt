@@ -1,5 +1,6 @@
 package world.cepi.orchestra
 
+import world.cepi.orchestra.data.raw.RawSongHeader
 import java.io.DataInputStream
 import java.io.File
 import java.io.FileInputStream

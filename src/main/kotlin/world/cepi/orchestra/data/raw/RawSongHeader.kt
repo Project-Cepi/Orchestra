@@ -1,4 +1,4 @@
-package world.cepi.orchestra
+package world.cepi.orchestra.data.raw
 
 data class RawSongHeader(
     val newFormat: Short,
