@@ -12,19 +12,19 @@ object PlayCommand: Command("orch"){
         val play = "play".literal()
         val songName = ArgumentType.Word("song-name")
 
-        addSyntax(play, songName) {player, args ->
-            val p = player as Player
+        addSyntax(play, songName) { sender, args ->
+            val player = sender as Player
             val file = File(Orchestra.folderDir + "\\${args.get(songName)}.nbs")
             if (file.exists()) {
 
                 // TODO should probably cache this
-                val song = Song.collectInfo(file)
+                val song = Song.from(file)
 
-                song.play()
+                song.play(player)
 
-                p.sendMessage("Song played successfully!")
+                player.sendMessage("Song played successfully!")
             } else {
-                p.sendMessage("That file does not exist!")
+                player.sendMessage("That file does not exist!")
             }
         }
     }

@@ -1,5 +1,6 @@
 package world.cepi.orchestra
 
+import net.minestom.server.entity.Player
 import world.cepi.orchestra.data.formatted.SongHeader
 import world.cepi.orchestra.data.raw.RawSongHeader
 import java.io.DataInputStream
@@ -10,12 +11,12 @@ class Song(
     val songHeader: SongHeader
 ) {
 
-    fun play() {
+    fun play(player: Player) {
 
     }
 
     companion object {
-        fun collectInfo(file: File): Song {
+        fun from(file: File): Song {
             val inputStream = DataInputStream(FileInputStream(file))
 
             val songHeader = SongHeader.fromRawHeader(RawSongHeader.fromDataStream(inputStream))
