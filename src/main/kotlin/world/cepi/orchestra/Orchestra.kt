@@ -3,6 +3,7 @@ package world.cepi.orchestra
 import net.minestom.server.extensions.Extension;
 import world.cepi.kstom.Manager
 import world.cepi.kstom.command.register
+import world.cepi.kstom.command.unregister
 import java.nio.file.Path
 import kotlin.io.path.createDirectories
 import kotlin.io.path.exists
@@ -11,6 +12,7 @@ class Orchestra : Extension() {
 
     override fun initialize() {
         PlayCommand.register()
+
         val file = Path.of(folderDir)
         if (!file.exists())
             file.createDirectories()
@@ -18,6 +20,8 @@ class Orchestra : Extension() {
     }
 
     override fun terminate() {
+        PlayCommand.unregister()
+
         logger.info("[Orchestra] has been disabled!")
     }
 

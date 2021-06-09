@@ -16,8 +16,6 @@ class HeaderParsingTest {
 
         val header = RawSongHeader.fromDataStream(dataInputStream)
 
-        println(header)
-
         assertEquals(0, header.newFormat)
         assertEquals(5, header.nbsVersion)
         assertEquals("Toby Fox", header.songOriginalAuthor)
