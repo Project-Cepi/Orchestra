@@ -35,8 +35,11 @@ $dokka.location:world.cepi.orchestra.data.formatted/SongNote/pitch/#/PointingToD
 $dokka.location:world.cepi.orchestra.data.formatted/SongNote/playToAudience/#net.kyori.adventure.audience.Audience#kotlin.Double#kotlin.Double#kotlin.Double/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-note/play-to-audience.html
 $dokka.location:world.cepi.orchestra.data.formatted/SongNote/volume/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-note/volume.html
 $dokka.location:world.cepi.orchestra.data.raw////PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/index.html
+$dokka.location:world.cepi.orchestra.data.raw/RawDataStreamGenerator///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-data-stream-generator/index.html
+$dokka.location:world.cepi.orchestra.data.raw/RawDataStreamGenerator/RawDataStreamGenerator/#kotlin.reflect.KClass[TypeParam(bounds=[kotlin.Any])]/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-data-stream-generator/-raw-data-stream-generator.html
+$dokka.location:world.cepi.orchestra.data.raw/RawDataStreamGenerator/clazz/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-data-stream-generator/clazz.html
+$dokka.location:world.cepi.orchestra.data.raw/RawDataStreamGenerator/fromDataStream/#world.cepi.orchestra.util.EndianDataInputStream/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-data-stream-generator/from-data-stream.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongHeader.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/-companion/index.html
-$dokka.location:world.cepi.orchestra.data.raw/RawSongHeader.Companion/fromDataStream/#world.cepi.orchestra.util.EndianDataInputStream/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/-companion/from-data-stream.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongHeader///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/index.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/RawSongHeader/#kotlin.Short#kotlin.Byte#kotlin.Byte#kotlin.Short#kotlin.Short#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.Short#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.String#kotlin.Byte#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/-raw-song-header.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/autoSaving/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/auto-saving.html
@@ -62,9 +65,8 @@ $dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/songTempo/#/Pointing
 $dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/timeSignature/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/time-signature.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/vanillaInstrumentCount/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/vanilla-instrument-count.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongNote.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/-companion/index.html
-$dokka.location:world.cepi.orchestra.data.raw/RawSongNote.Companion/fromDataStream/#world.cepi.orchestra.util.EndianDataInputStream/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/-companion/from-data-stream.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongNote///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/index.html
-$dokka.location:world.cepi.orchestra.data.raw/RawSongNote/RawSongNote/#kotlin.Short#kotlin.Short#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Byte/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/-raw-song-note.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongNote/RawSongNote/#kotlin.Short#kotlin.Short#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/-raw-song-note.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongNote/instrument/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/instrument.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongNote/key/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/key.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongNote/layerJumps/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/layer-jumps.html
@@ -74,6 +76,7 @@ $dokka.location:world.cepi.orchestra.data.raw/RawSongNote/tickJumps/#/PointingTo
 $dokka.location:world.cepi.orchestra.data.raw/RawSongNote/volume/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/volume.html
 $dokka.location:world.cepi.orchestra.util////PointingToDeclaration/-orchestra/world.cepi.orchestra.util/index.html
 $dokka.location:world.cepi.orchestra.util/ConstructorStreamParser///PointingToDeclaration/-orchestra/world.cepi.orchestra.util/-constructor-stream-parser/index.html
+$dokka.location:world.cepi.orchestra.util/ConstructorStreamParser/createInstance/#java.io.DataInput#kotlin.reflect.KClass[TypeParam(bounds=[kotlin.Any])]/PointingToDeclaration/-orchestra/world.cepi.orchestra.util/-constructor-stream-parser/create-instance.html
 $dokka.location:world.cepi.orchestra.util/ConstructorStreamParser/createInstance/#java.io.DataInput/PointingToDeclaration/-orchestra/world.cepi.orchestra.util/-constructor-stream-parser/create-instance.html
 $dokka.location:world.cepi.orchestra.util/EndianDataInputStream///PointingToDeclaration/-orchestra/world.cepi.orchestra.util/-endian-data-input-stream/index.html
 $dokka.location:world.cepi.orchestra.util/EndianDataInputStream/EndianDataInputStream/#java.io.InputStream/PointingToDeclaration/-orchestra/world.cepi.orchestra.util/-endian-data-input-stream/-endian-data-input-stream.html
