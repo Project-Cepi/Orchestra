@@ -1,12 +1,13 @@
 package world.cepi.orchestra.util
 
+import java.io.DataInput
 import kotlin.reflect.KClass
 import kotlin.reflect.full.primaryConstructor
 import kotlin.reflect.full.valueParameters
 
 object ConstructorStreamParser {
 
-    inline fun <reified T : Any> createInstance(dataInputStream: EndianDataInputStream): T? {
+    inline fun <reified T : Any> createInstance(dataInputStream: DataInput): T? {
         val constructor = T::class.primaryConstructor ?: return null
 
         return constructor.call(*constructor.valueParameters.map {

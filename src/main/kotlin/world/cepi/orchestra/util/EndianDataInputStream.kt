@@ -6,6 +6,7 @@ import java.io.IOException
 import java.io.InputStream
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
+import java.nio.charset.StandardCharsets
 
 
 /**
@@ -31,7 +32,7 @@ class EndianDataInputStream(stream: InputStream) : InputStream(), DataInput {
         return dataIn.read(b, off, len)
     }
 
-    @Deprecated("")
+    @Deprecated("This method does not properly convert bytes to characters.", ReplaceWith("dataIn.readUTF()"))
     @Throws(IOException::class)
     override fun readLine(): String {
         return dataIn.readLine()
@@ -67,7 +68,11 @@ class EndianDataInputStream(stream: InputStream) : InputStream(), DataInput {
 
     @Throws(IOException::class)
     override fun readChar(): Char {
-        return dataIn.readChar()
+        buffer.clear()
+        buffer.order(ByteOrder.BIG_ENDIAN)
+            .putLong(dataIn.readLong())
+            .flip()
+        return buffer.order(order).char
     }
 
     @Throws(IOException::class)
@@ -82,7 +87,20 @@ class EndianDataInputStream(stream: InputStream) : InputStream(), DataInput {
 
     @Throws(IOException::class)
     override fun readUTF(): String {
-        return dataIn.readUTF()
+        var length = readInt()
+
+        if (length == 0) return ""
+
+        val builder = StringBuilder(length)
+        while (length > 0) {
+            var c = readByte().toInt().toChar()
+            if (c == 0x0D.toChar()) {
+                c = ' '
+            }
+            builder.append(c)
+            --length
+        }
+        return builder.toString()
     }
 
     @Throws(IOException::class)

@@ -4,7 +4,7 @@ import net.minestom.server.sound.SoundEvent
 
 object SongKeyMap {
 
-    val map = arrayOf(
+    private val map = arrayOf(
         SoundEvent.NOTE_BLOCK_HARP,
         SoundEvent.NOTE_BLOCK_BASS,
         SoundEvent.NOTE_BLOCK_BASEDRUM,
