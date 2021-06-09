@@ -23,9 +23,12 @@ data class SongNote(
         volume: Byte,
         panning: Byte,
         pitch: Byte
-    ): this(SongKeyMap[instrument.toInt()] ?: throw IllegalArgumentException("Song instrument does not exist"), key, volume, panning, pitch)
+    ): this(
+        SongKeyMap[instrument.toInt()] ?: throw IllegalArgumentException("Song instrument does not exist"),
+        key, volume, panning, pitch
+    )
 
-    fun playMinecraft(audience: Audience, x: Double, y: Double, z: Double) {
+    fun playToAudience(audience: Audience, x: Double, y: Double, z: Double) {
 
         // TODO volume / pitch
         audience.playSound(Sound.sound(instrument, Sound.Source.MUSIC, 1f, 1f), x, y, z)

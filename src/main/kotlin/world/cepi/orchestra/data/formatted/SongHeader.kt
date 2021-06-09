@@ -4,14 +4,11 @@ import world.cepi.orchestra.OldSongError
 import world.cepi.orchestra.data.raw.RawSongHeader
 
 data class SongHeader(
-    val nbsVersion: Byte,
-    val vanillaInstrumentCount: Byte,
-    val songLength: Short,
-    val layerCount: Short,
-    val songName: String,
-    val songAuthor: String,
-    val songOriginalAuthor: String,
-    val songDescription: String,
+    val nbsVersion: Byte = 5,
+    val songName: String = "Unknown",
+    val songAuthor: String = "Unknown",
+    val songOriginalAuthor: String = "Unknown",
+    val songDescription: String = "A song",
     val songTempo: Short,
     val timeSignature: Byte,
     val minutesSpent: Int,
@@ -31,9 +28,6 @@ data class SongHeader(
 
             return SongHeader(
                 rawSongHeader.nbsVersion,
-                rawSongHeader.vanillaInstrumentCount,
-                rawSongHeader.songLength,
-                rawSongHeader.layerCount,
                 rawSongHeader.songName,
                 rawSongHeader.songAuthor,
                 rawSongHeader.songOriginalAuthor,
