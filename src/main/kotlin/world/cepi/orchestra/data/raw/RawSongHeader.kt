@@ -1,7 +1,7 @@
 package world.cepi.orchestra.data.raw
 
 import world.cepi.orchestra.util.ConstructorStreamParser
-import java.io.DataInputStream
+import world.cepi.orchestra.util.EndianDataInputStream
 
 data class RawSongHeader(
     val newFormat: Short,
@@ -28,6 +28,6 @@ data class RawSongHeader(
     val loopStartTick: Short
 ) {
     companion object {
-        fun fromDataStream(dataInputStream: DataInputStream) = ConstructorStreamParser.createInstance<RawSongHeader>(dataInputStream)!!
+        fun fromDataStream(dataInputStream: EndianDataInputStream) = ConstructorStreamParser.createInstance<RawSongHeader>(dataInputStream)!!
     }
 }

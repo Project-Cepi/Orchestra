@@ -3,10 +3,10 @@ package world.cepi.orchestra.util
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotEquals
 import org.junit.jupiter.api.Test
-import java.io.DataInputStream
 import java.io.DataOutputStream
 import java.io.PipedInputStream
 import java.io.PipedOutputStream
+import java.nio.ByteOrder
 
 class ConstructorStreamTest {
 
@@ -43,7 +43,9 @@ class ConstructorStreamTest {
         dataOutput.writeBoolean(true)
         dataOutput.writeUTF("Hello")
 
-        val instance = ConstructorStreamParser.createInstance<ValidClass>(DataInputStream(pipeInput))
+        val instance = ConstructorStreamParser.createInstance<ValidClass>(EndianDataInputStream(pipeInput).order(
+            ByteOrder.BIG_ENDIAN
+        ))
 
         assertNotEquals(null, instance)
 
