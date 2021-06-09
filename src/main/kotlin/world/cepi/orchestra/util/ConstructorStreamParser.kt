@@ -7,11 +7,11 @@ import kotlin.reflect.full.valueParameters
 
 object ConstructorStreamParser {
 
-    inline fun <reified T : Any> createInstance(dataInputStream: DataInput): T? {
-        val constructor = T::class.primaryConstructor ?: return null
+    fun <T : Any> createInstance(dataInputStream: DataInput, clazz: KClass<T>): T? {
+        val constructor = clazz.primaryConstructor ?: return null
 
         return constructor.call(*constructor.valueParameters.map {
-            
+
             when (it.type.classifier as? KClass<*> ?: return null) {
                 Byte::class -> dataInputStream.readByte()
                 Short::class -> dataInputStream.readShort()
@@ -26,5 +26,8 @@ object ConstructorStreamParser {
             }
         }.toTypedArray())
     }
+
+    inline fun <reified T : Any> createInstance(dataInputStream: DataInput): T? =
+        createInstance(dataInputStream, T::class)
 
 }

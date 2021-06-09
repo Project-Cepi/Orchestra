@@ -4,9 +4,10 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import world.cepi.orchestra.data.raw.RawSongHeader
+import world.cepi.orchestra.data.raw.RawSongNote
 import world.cepi.orchestra.util.EndianDataInputStream
 
-class HeaderParsingTest {
+class SongParsingTest {
 
     @Test
     fun `make sure headers are parsed correctly`() {
@@ -19,6 +20,10 @@ class HeaderParsingTest {
         assertEquals(0, header.newFormat)
         assertEquals(5, header.nbsVersion)
         assertEquals("Toby Fox", header.songOriginalAuthor)
+
+        repeat(50) {
+            println(RawSongNote.fromDataStream(dataInputStream))
+        }
     }
 
 }

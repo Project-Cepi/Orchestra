@@ -27,7 +27,5 @@ data class RawSongHeader(
     val maxLoopCount: Byte,
     val loopStartTick: Short
 ) {
-    companion object {
-        fun fromDataStream(dataInputStream: EndianDataInputStream) = ConstructorStreamParser.createInstance<RawSongHeader>(dataInputStream)!!
-    }
+    companion object: RawDataStreamGenerator<RawSongHeader>(RawSongHeader::class)
 }
