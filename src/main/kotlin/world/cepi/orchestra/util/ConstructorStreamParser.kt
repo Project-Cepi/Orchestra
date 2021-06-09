@@ -14,9 +14,13 @@ object ConstructorStreamParser {
 
             when (it.type.classifier as? KClass<*> ?: return null) {
                 Byte::class -> dataInputStream.readByte()
+                UByte::class -> dataInputStream.readByte().toUByte()
                 Short::class -> dataInputStream.readShort()
+                UShort::class -> dataInputStream.readShort().toUShort()
                 Int::class -> dataInputStream.readInt()
+                UInt::class -> dataInputStream.readInt().toUInt()
                 Long::class -> dataInputStream.readLong()
+                ULong::class -> dataInputStream.readLong().toULong()
                 Double::class -> dataInputStream.readDouble()
                 Float::class -> dataInputStream.readFloat()
                 Char::class -> dataInputStream.readChar()

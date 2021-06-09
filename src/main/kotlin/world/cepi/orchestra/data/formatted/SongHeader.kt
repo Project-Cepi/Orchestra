@@ -9,7 +9,8 @@ data class SongHeader(
     val songAuthor: String = "Unknown",
     val songOriginalAuthor: String = "Unknown",
     val songDescription: String = "A song",
-    val songTempo: Short,
+    /** Tempo measured in ticks per second. */
+    val songTempo: Double,
     val timeSignature: Byte,
     val minutesSpent: Int,
     val leftClicks: Int,
@@ -17,7 +18,7 @@ data class SongHeader(
     val noteBlocksAdded: Int,
     val noteBlocksRemoved: Int,
     val midiOrSchematicFileName: String,
-    val loop: Byte,
+    val loop: Boolean,
     val maxLoopCount: Byte,
     val loopStartTick: Short
 ) {
@@ -32,7 +33,7 @@ data class SongHeader(
                 rawSongHeader.songAuthor,
                 rawSongHeader.songOriginalAuthor,
                 rawSongHeader.songDescription,
-                rawSongHeader.songTempo,
+                rawSongHeader.songTempo.toDouble() / 100,
                 rawSongHeader.timeSignature,
                 rawSongHeader.minutesSpent,
                 rawSongHeader.leftClicks,
@@ -40,7 +41,7 @@ data class SongHeader(
                 rawSongHeader.noteBlocksAdded,
                 rawSongHeader.noteBlocksRemoved,
                 rawSongHeader.midiOrSchematicFileName,
-                rawSongHeader.loop,
+                rawSongHeader.loop != 0.toByte(),
                 rawSongHeader.maxLoopCount,
                 rawSongHeader.loopStartTick
             )

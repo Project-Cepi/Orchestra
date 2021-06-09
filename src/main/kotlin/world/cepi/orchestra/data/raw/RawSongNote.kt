@@ -1,12 +1,12 @@
 package world.cepi.orchestra.data.raw
 
 data class RawSongNote(
-    val tickJumps: Short,
-    val layerJumps: Short,
-    val instrument: Byte,
-    val key: Byte,
-    val volume: Byte,
-    val panning: Byte,
+    val tickJumps: UShort,
+    val layerJumps: UShort,
+    val instrument: UByte,
+    val key: UByte,
+    val volume: UByte,
+    val panning: UByte,
     val pitch: Short
 ) {
 
