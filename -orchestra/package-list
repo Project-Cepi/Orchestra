@@ -4,7 +4,7 @@ $dokka.location:world.cepi.orchestra.data.formatted////PointingToDeclaration/-o
 $dokka.location:world.cepi.orchestra.data.formatted/SongHeader.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/-companion/index.html
 $dokka.location:world.cepi.orchestra.data.formatted/SongHeader.Companion/fromRawHeader/#world.cepi.orchestra.data.raw.RawSongHeader/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/-companion/from-raw-header.html
 $dokka.location:world.cepi.orchestra.data.formatted/SongHeader///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/index.html
-$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/SongHeader/#kotlin.Byte#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.Short#kotlin.Byte#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.String#kotlin.Byte#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/-song-header.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongHeader/SongHeader/#kotlin.Byte#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.Double#kotlin.Byte#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.String#kotlin.Boolean#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/-song-header.html
 $dokka.location:world.cepi.orchestra.data.formatted/SongHeader/leftClicks/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/left-clicks.html
 $dokka.location:world.cepi.orchestra.data.formatted/SongHeader/loop/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/loop.html
 $dokka.location:world.cepi.orchestra.data.formatted/SongHeader/loopStartTick/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-header/loop-start-tick.html
@@ -66,7 +66,7 @@ $dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/timeSignature/#/Poin
 $dokka.location:world.cepi.orchestra.data.raw/RawSongHeader/vanillaInstrumentCount/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-header/vanilla-instrument-count.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongNote.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/-companion/index.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongNote///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/index.html
-$dokka.location:world.cepi.orchestra.data.raw/RawSongNote/RawSongNote/#kotlin.Short#kotlin.Short#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/-raw-song-note.html
+$dokka.location:world.cepi.orchestra.data.raw/RawSongNote/RawSongNote/#kotlin.UShort#kotlin.UShort#kotlin.UByte#kotlin.UByte#kotlin.UByte#kotlin.UByte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/-raw-song-note.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongNote/instrument/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/instrument.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongNote/key/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/key.html
 $dokka.location:world.cepi.orchestra.data.raw/RawSongNote/layerJumps/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.raw/-raw-song-note/layer-jumps.html
