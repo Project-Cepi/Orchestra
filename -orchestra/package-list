@@ -26,8 +26,15 @@ $dokka.location:world.cepi.orchestra.data.formatted/SongKeyMap///PointingToDecla
 $dokka.location:world.cepi.orchestra.data.formatted/SongKeyMap/get/#kotlin.Int/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-key-map/get.html
 $dokka.location:world.cepi.orchestra.data.formatted/SongMap///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-map/index.html
 $dokka.location:world.cepi.orchestra.data.formatted/SongMap/SongMap/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-map/-song-map.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongMap/get/#kotlin.Int#kotlin.Int/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-map/get.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongMap/map/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-map/map.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongMap/play/#net.minestom.server.entity.Player/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-map/play.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongMap/set/#kotlin.Int#kotlin.Int#world.cepi.orchestra.data.formatted.SongNote/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-map/set.html
 $dokka.location:world.cepi.orchestra.data.formatted/SongNote.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-note/-companion/index.html
-$dokka.location:world.cepi.orchestra.data.formatted/SongNote.Companion/listFromStream/#java.io.DataInput/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-note/-companion/list-from-stream.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongNote.Companion/mapFromStream/#java.io.DataInput/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-note/-companion/map-from-stream.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongNote.Companion/max/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-note/-companion/max.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongNote.Companion/min/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-note/-companion/min.html
+$dokka.location:world.cepi.orchestra.data.formatted/SongNote.Companion/noteBlockPitchToMinecraftPitch/#kotlin.Byte/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-note/-companion/note-block-pitch-to-minecraft-pitch.html
 $dokka.location:world.cepi.orchestra.data.formatted/SongNote///PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-note/index.html
 $dokka.location:world.cepi.orchestra.data.formatted/SongNote/SongNote/#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-note/-song-note.html
 $dokka.location:world.cepi.orchestra.data.formatted/SongNote/SongNote/#net.minestom.server.sound.SoundEvent#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra.data.formatted/-song-note/-song-note.html
@@ -102,18 +109,18 @@ $dokka.location:world.cepi.orchestra/OldSongError///PointingToDeclaration/-orch
 $dokka.location:world.cepi.orchestra/OldSongError/OldSongError/#kotlin.String/PointingToDeclaration/-orchestra/world.cepi.orchestra/-old-song-error/-old-song-error.html
 $dokka.location:world.cepi.orchestra/Orchestra.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/-companion/index.html
 $dokka.location:world.cepi.orchestra/Orchestra.Companion/folderDir/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/-companion/folder-dir.html
-$dokka.location:world.cepi.orchestra/Orchestra.Companion/plugin/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/-companion/plugin.html
 $dokka.location:world.cepi.orchestra/Orchestra///PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/index.html
 $dokka.location:world.cepi.orchestra/Orchestra/Orchestra/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/-orchestra.html
 $dokka.location:world.cepi.orchestra/Orchestra/initialize/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/initialize.html
 $dokka.location:world.cepi.orchestra/Orchestra/terminate/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/terminate.html
 $dokka.location:world.cepi.orchestra/PlayCommand///PointingToDeclaration/-orchestra/world.cepi.orchestra/-play-command/index.html
 $dokka.location:world.cepi.orchestra/Song.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/-companion/index.html
-$dokka.location:world.cepi.orchestra/Song.Companion/from/#java.io.File/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/-companion/from.html
+$dokka.location:world.cepi.orchestra/Song.Companion/from/#java.nio.file.Path/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/-companion/from.html
 $dokka.location:world.cepi.orchestra/Song///PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/index.html
-$dokka.location:world.cepi.orchestra/Song/Song/#world.cepi.orchestra.data.formatted.SongHeader/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/-song.html
+$dokka.location:world.cepi.orchestra/Song/Song/#world.cepi.orchestra.data.formatted.SongHeader#world.cepi.orchestra.data.formatted.SongMap/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/-song.html
 $dokka.location:world.cepi.orchestra/Song/play/#net.minestom.server.entity.Player/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/play.html
 $dokka.location:world.cepi.orchestra/Song/songHeader/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/song-header.html
+$dokka.location:world.cepi.orchestra/Song/songMap/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-song/song-map.html
 world.cepi.orchestra
 world.cepi.orchestra.data.formatted
 world.cepi.orchestra.data.raw
