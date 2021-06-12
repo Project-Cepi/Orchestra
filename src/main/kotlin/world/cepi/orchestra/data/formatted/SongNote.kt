@@ -9,6 +9,7 @@ import java.lang.IllegalArgumentException
 import javax.sound.midi.MidiSystem
 import javax.sound.midi.Receiver
 import javax.sound.midi.ShortMessage
+import kotlin.math.pow
 
 data class SongNote(
     val instrument: SoundEvent,
@@ -31,17 +32,25 @@ data class SongNote(
 
     fun playToAudience(audience: Audience, x: Double, y: Double, z: Double) {
 
-        // TODO volume / pitch
-        audience.playSound(Sound.sound(instrument, Sound.Source.MUSIC, 1f, 1f), x, y, z)
+        audience.playSound(Sound.sound(instrument, Sound.Source.VOICE, volume / 100.toFloat(),
+            noteBlockPitchToMinecraftPitch(key)
+        ), x, y, z)
     }
 
     companion object {
-        fun listFromStream(dataStream: DataInput): List<SongNote> {
 
-            val list = mutableListOf<SongNote>()
+        const val min = 33.toShort()
+        const val max = 57.toShort()
 
-            while (dataStream.readShort() != 0.toShort()) {
-                while (dataStream.readShort() != 0.toShort()) {
+        fun mapFromStream(dataStream: DataInput): SongMap {
+
+            val map = SongMap()
+
+            var tickJump = -1
+            while (dataStream.readShort().also { tickJump += it } != 0.toShort()) {
+
+                var layerJump = -1
+                while (dataStream.readShort().also { layerJump += it } != 0.toShort()) {
                     val note = SongNote(
                         dataStream.readByte(),
                         dataStream.readByte(),
@@ -50,11 +59,16 @@ data class SongNote(
                         dataStream.readShort()
                     )
 
-                    list.add(note)
+                    map[tickJump, layerJump] = note
                 }
             }
 
-            return list
+            return map
         }
+
+        fun noteBlockPitchToMinecraftPitch(pitch: Byte): Float {
+            return (2.toDouble().pow(((pitch.coerceIn(min.toByte(), max.toByte()).toDouble() - min) - 12) / 12)).toFloat()
+        }
+
     }
 }

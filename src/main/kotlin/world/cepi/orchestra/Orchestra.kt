@@ -13,7 +13,7 @@ class Orchestra : Extension() {
     override fun initialize() {
         PlayCommand.register()
 
-        val file = Path.of(folderDir)
+        val file = folderDir
         if (!file.exists())
             file.createDirectories()
         logger.info("[Orchestra] has been enabled!")
@@ -27,9 +27,7 @@ class Orchestra : Extension() {
 
     companion object {
 
-        const val folderDir = "extensions\\Orchestra"
-
-        val plugin: Orchestra = Manager.extension.getExtension("Orchestra") as Orchestra
+        val folderDir = Path.of("extensions").resolve("Orchestra")
     }
 
 }

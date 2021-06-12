@@ -6,6 +6,7 @@ import net.minestom.server.entity.Player
 import world.cepi.kstom.command.addSyntax
 import world.cepi.kstom.command.arguments.literal
 import java.io.File
+import kotlin.io.path.exists
 
 object PlayCommand: Command("orchestra", "orch") {
     init {
@@ -14,7 +15,7 @@ object PlayCommand: Command("orchestra", "orch") {
 
         addSyntax(play, songName) { sender, args ->
             val player = sender as Player
-            val file = File(Orchestra.folderDir + "\\${args[songName]}.nbs")
+            val file = Orchestra.folderDir.resolve("${args[songName]}.nbs")
             if (file.exists()) {
 
                 // TODO should probably cache this
