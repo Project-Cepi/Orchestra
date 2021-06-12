@@ -115,8 +115,13 @@ $dokka.location:world.cepi.orchestra.api/Song/play/#net.minestom.server.entity.P
 $dokka.location:world.cepi.orchestra.api/Song/songHeader/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song/song-header.html
 $dokka.location:world.cepi.orchestra.api/Song/songMap/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song/song-map.html
 $dokka.location:world.cepi.orchestra.api/SongPlayerInstance///PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song-player-instance/index.html
-$dokka.location:world.cepi.orchestra.api/SongPlayerInstance/SongPlayerInstance/#net.minestom.server.timer.Task/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song-player-instance/-song-player-instance.html
+$dokka.location:world.cepi.orchestra.api/SongPlayerInstance/SongPlayerInstance/#world.cepi.orchestra.api.data.formatted.SongMap#net.minestom.server.entity.Player#kotlin.Double/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song-player-instance/-song-player-instance.html
 $dokka.location:world.cepi.orchestra.api/SongPlayerInstance/cancel/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song-player-instance/cancel.html
+$dokka.location:world.cepi.orchestra.api/SongPlayerInstance/map/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song-player-instance/map.html
+$dokka.location:world.cepi.orchestra.api/SongPlayerInstance/player/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song-player-instance/player.html
+$dokka.location:world.cepi.orchestra.api/SongPlayerInstance/step/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song-player-instance/step.html
+$dokka.location:world.cepi.orchestra.api/SongPlayerInstance/task/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song-player-instance/task.html
+$dokka.location:world.cepi.orchestra.api/SongPlayerInstance/tempo/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song-player-instance/tempo.html
 $dokka.location:world.cepi.orchestra////PointingToDeclaration/-orchestra/world.cepi.orchestra/index.html
 $dokka.location:world.cepi.orchestra/Orchestra.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/-companion/index.html
 $dokka.location:world.cepi.orchestra/Orchestra.Companion/folderDir/#/PointingToDeclaration/-orchestra/world.cepi.orchestra/-orchestra/-companion/folder-dir.html
