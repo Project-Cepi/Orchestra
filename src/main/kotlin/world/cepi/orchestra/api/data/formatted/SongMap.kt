@@ -24,20 +24,7 @@ class SongMap {
     }
 
     fun play(player: Player, tempo: Double): SongPlayerInstance {
-
-        var step = 0
-
-        return SongPlayerInstance(
-                Manager.scheduler.buildTask {
-                    map[step]?.values?.forEach { note ->
-                        note.playToAudience(player, player.position.x, player.position.y, player.position.z)
-                    }
-
-                    step++
-                }
-                    .repeat(UpdateOption((20 / tempo).toLong(), TimeUnit.TICK))
-                    .schedule()
-        )
+        return SongPlayerInstance(this, player, tempo)
     }
 
 
