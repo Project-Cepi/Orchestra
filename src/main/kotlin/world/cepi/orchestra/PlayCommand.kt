@@ -5,7 +5,7 @@ import net.minestom.server.command.builder.arguments.ArgumentType
 import net.minestom.server.entity.Player
 import world.cepi.kstom.command.addSyntax
 import world.cepi.kstom.command.arguments.literal
-import java.io.File
+import world.cepi.orchestra.api.Song
 import kotlin.io.path.exists
 
 object PlayCommand: Command("orchestra", "orch") {

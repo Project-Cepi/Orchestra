@@ -1,4 +1,4 @@
-package world.cepi.orchestra.data.formatted
+package world.cepi.orchestra.api.data.formatted
 
 import net.minestom.server.entity.Player
 import net.minestom.server.utils.time.TimeUnit

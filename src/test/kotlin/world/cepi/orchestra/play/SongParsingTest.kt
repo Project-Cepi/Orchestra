@@ -2,10 +2,9 @@ package world.cepi.orchestra.play
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import world.cepi.orchestra.data.formatted.SongNote
-import world.cepi.orchestra.data.raw.RawSongHeader
-import world.cepi.orchestra.util.EndianDataInputStream
-import kotlin.math.pow
+import world.cepi.orchestra.api.data.formatted.SongNote
+import world.cepi.orchestra.api.data.raw.RawSongHeader
+import world.cepi.orchestra.api.util.EndianDataInputStream
 
 class SongParsingTest {
 

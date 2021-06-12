@@ -1,14 +1,9 @@
-package world.cepi.orchestra.data.formatted
+package world.cepi.orchestra.api.data.formatted
 
 import net.kyori.adventure.audience.Audience
 import net.kyori.adventure.sound.Sound
-import net.minestom.server.entity.Player
 import net.minestom.server.sound.SoundEvent
 import java.io.DataInput
-import java.lang.IllegalArgumentException
-import javax.sound.midi.MidiSystem
-import javax.sound.midi.Receiver
-import javax.sound.midi.ShortMessage
 import kotlin.math.pow
 
 data class SongNote(

@@ -1,4 +1,4 @@
-package world.cepi.orchestra.util
+package world.cepi.orchestra.api.util
 
 import java.io.DataInput
 import kotlin.reflect.KClass

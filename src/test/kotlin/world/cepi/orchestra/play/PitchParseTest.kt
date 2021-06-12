@@ -2,7 +2,7 @@ package world.cepi.orchestra.play
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import world.cepi.orchestra.data.formatted.SongNote
+import world.cepi.orchestra.api.data.formatted.SongNote
 
 class PitchParseTest {
 

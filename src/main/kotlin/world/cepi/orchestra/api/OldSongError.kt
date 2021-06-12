@@ -1,4 +1,4 @@
-package world.cepi.orchestra
+package world.cepi.orchestra.api
 
 /**
  * If the song is in an old format, throw an error.

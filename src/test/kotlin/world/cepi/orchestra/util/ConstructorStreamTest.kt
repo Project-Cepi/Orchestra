@@ -3,6 +3,7 @@ package world.cepi.orchestra.util
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotEquals
 import org.junit.jupiter.api.Test
+import world.cepi.orchestra.api.util.ConstructorStreamParser
 import java.io.DataInputStream
 import java.io.DataOutputStream
 import java.io.PipedInputStream

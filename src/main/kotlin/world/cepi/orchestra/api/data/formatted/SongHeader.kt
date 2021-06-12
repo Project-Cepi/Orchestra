@@ -1,7 +1,7 @@
-package world.cepi.orchestra.data.formatted
+package world.cepi.orchestra.api.data.formatted
 
-import world.cepi.orchestra.OldSongError
-import world.cepi.orchestra.data.raw.RawSongHeader
+import world.cepi.orchestra.api.OldSongError
+import world.cepi.orchestra.api.data.raw.RawSongHeader
 
 data class SongHeader(
     val nbsVersion: Byte = 5,
