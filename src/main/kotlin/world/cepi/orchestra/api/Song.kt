@@ -14,9 +14,8 @@ class Song(
     val songMap: SongMap
 ) {
 
-    fun play(player: Player) {
+    fun play(player: Player): SongPlayerInstance =
         songMap.play(player, songHeader.songTempo)
-    }
 
     companion object {
         fun from(path: Path): Song {

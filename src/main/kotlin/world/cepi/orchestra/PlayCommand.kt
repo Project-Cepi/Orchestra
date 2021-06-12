@@ -8,7 +8,7 @@ import world.cepi.kstom.command.arguments.literal
 import world.cepi.orchestra.api.Song
 import kotlin.io.path.exists
 
-object PlayCommand: Command("orchestra", "orch") {
+object PlayCommand : Command("orchestra", "orch") {
     init {
         val play = "play".literal()
         val songName = ArgumentType.Word("song-name")

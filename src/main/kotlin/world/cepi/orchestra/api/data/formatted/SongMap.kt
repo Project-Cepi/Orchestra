@@ -4,6 +4,7 @@ import net.minestom.server.entity.Player
 import net.minestom.server.utils.time.TimeUnit
 import net.minestom.server.utils.time.UpdateOption
 import world.cepi.kstom.Manager
+import world.cepi.orchestra.api.SongPlayerInstance
 
 class SongMap {
 
@@ -22,19 +23,21 @@ class SongMap {
         map[x]!![y] = note
     }
 
-    fun play(player: Player, tempo: Double) {
+    fun play(player: Player, tempo: Double): SongPlayerInstance {
 
         var step = 0
 
-        Manager.scheduler.buildTask {
-            map[step]?.values?.forEach { note ->
-                note.playToAudience(player, player.position.x, player.position.y, player.position.z)
-            }
+        return SongPlayerInstance(
+                Manager.scheduler.buildTask {
+                    map[step]?.values?.forEach { note ->
+                        note.playToAudience(player, player.position.x, player.position.y, player.position.z)
+                    }
 
-            step++
-        }
-            .repeat(UpdateOption((20 / tempo).toLong(), TimeUnit.TICK))
-            .schedule()
+                    step++
+                }
+                    .repeat(UpdateOption((20 / tempo).toLong(), TimeUnit.TICK))
+                    .schedule()
+        )
     }
 
 
