@@ -10,6 +10,7 @@ data class SongHeader(
     val originalAuthor: String = "Unknown",
     val description: String = "A song",
     val length: Short,
+    val layerCount: Short,
     /** Tempo measured in ticks per second. */
     val tempo: Double,
     val timeSignature: Byte,
@@ -35,6 +36,7 @@ data class SongHeader(
                 rawSongHeader.songOriginalAuthor,
                 rawSongHeader.songDescription,
                 rawSongHeader.songLength,
+                rawSongHeader.layerCount,
                 rawSongHeader.songTempo.toDouble() / 100,
                 rawSongHeader.timeSignature,
                 rawSongHeader.minutesSpent,

@@ -20,7 +20,7 @@ object PlayCommand : Command("orchestra") {
         val tempoLiteral = "tempo".literal()
         val tempo = ArgumentType.Double("tempoAmount").min(0.0).max(20.0)
 
-        val songName = ArgumentType.Word("song-name")
+        val songName = ArgumentType.Word("songName")
 
         addSyntax(play, songName) { sender, args ->
             val player = sender as Player

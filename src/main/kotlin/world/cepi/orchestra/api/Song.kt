@@ -1,9 +1,8 @@
 package world.cepi.orchestra.api
 
 import net.minestom.server.entity.Player
-import world.cepi.orchestra.api.data.formatted.SongHeader
-import world.cepi.orchestra.api.data.formatted.SongMap
-import world.cepi.orchestra.api.data.formatted.SongNote
+import world.cepi.orchestra.api.data.formatted.*
+import world.cepi.orchestra.api.data.raw.RawCustomInstrument
 import world.cepi.orchestra.api.data.raw.RawSongHeader
 import world.cepi.orchestra.api.util.EndianDataInputStream
 import java.nio.file.Path
@@ -11,11 +10,13 @@ import kotlin.io.path.inputStream
 
 class Song(
     val header: SongHeader,
-    val map: SongMap
+    val map: SongMap,
+    val layers: List<SongLayer>,
+    val customInstruments: List<CustomInstrument>
 ) {
 
     fun play(player: Player): SongPlayerInstance =
-        map.play(player, header.tempo)
+        map.play(player, header.tempo, customInstruments)
 
     companion object {
         fun from(path: Path): Song {
@@ -25,7 +26,17 @@ class Song(
 
             val map = SongNote.mapFromStream(inputStream)
 
-            return Song(songHeader, map)
+            val layers = (1..songHeader.layerCount).map {
+                SongLayer.fromDataStream(inputStream)
+            }
+
+            val customInstrumentAmount = inputStream.readByte()
+
+            val customInstruments = (1..customInstrumentAmount).map {
+                CustomInstrument.fromRawCustomInstrument(RawCustomInstrument.fromDataStream(inputStream))
+            }
+
+            return Song(songHeader, map, layers, customInstruments)
         }
     }
 }

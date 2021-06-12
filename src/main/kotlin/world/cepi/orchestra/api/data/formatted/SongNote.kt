@@ -12,29 +12,32 @@ import kotlin.math.pow
  */
 data class SongNote(
     /** The instrument of this note. */
-    val instrument: Key,
+    val instrument: Byte,
     val key: Byte,
     val volume: Byte,
     val panning: Byte,
     val pitch: Short
 ) {
 
-    constructor(
-        instrument: Byte,
-        key: Byte,
-        volume: Byte,
-        panning: Byte,
-        pitch: Short
-    ): this(
-        SongKeyMap[instrument.toInt()]?.key() ?: SoundEvent.AMBIENT_UNDERWATER_EXIT.key(), /* throw IllegalArgumentException("Song instrument does not exist"), */
-        key, volume, panning, pitch
-    )
+    fun sound(customIntruments: List<CustomInstrument>): Key {
+        return SongKeyMap[instrument.toInt()]?.key()
+            ?: if (customIntruments.size > instrument - 15) customIntruments[instrument - 15].name else null
+            ?: SoundEvent.NOTE_BLOCK_PLING.key()
+    }
 
-    fun playToAudience(audience: Audience, x: Double, y: Double, z: Double) {
+    fun playToAudience(
+        audience: Audience,
+        x: Double,
+        y: Double,
+        z: Double,
+        customIntruments: List<CustomInstrument>
+    ) {
 
-        audience.playSound(Sound.sound(instrument, Sound.Source.VOICE, volume / 100.toFloat(),
-            noteBlockPitchToMinecraftPitch(key)
-        ), x, y, z)
+        audience.playSound(
+            Sound.sound(
+                sound(customIntruments), Sound.Source.VOICE, volume / 100.toFloat(), noteBlockPitchToMinecraftPitch(key)
+            ), x, y, z
+        )
     }
 
     companion object {

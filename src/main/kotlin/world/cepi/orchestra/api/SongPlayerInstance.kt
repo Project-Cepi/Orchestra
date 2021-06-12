@@ -5,12 +5,14 @@ import net.minestom.server.timer.Task
 import net.minestom.server.utils.time.TimeUnit
 import net.minestom.server.utils.time.UpdateOption
 import world.cepi.kstom.Manager
+import world.cepi.orchestra.api.data.formatted.CustomInstrument
 import world.cepi.orchestra.api.data.formatted.SongMap
 
 class SongPlayerInstance(
     val map: SongMap,
     val player: Player,
-    tempo: Double
+    tempo: Double,
+    val customInstruments: List<CustomInstrument> = listOf()
 ) {
 
     var tempo: Double = tempo
@@ -28,7 +30,7 @@ class SongPlayerInstance(
 
         task = Manager.scheduler.buildTask {
             map.map[step]?.values?.forEach { note ->
-                note.playToAudience(player, player.position.x, player.position.y, player.position.z)
+                note.playToAudience(player, player.position.x, player.position.y, player.position.z, customInstruments)
             }
 
             step++
