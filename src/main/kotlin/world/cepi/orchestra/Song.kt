@@ -18,7 +18,7 @@ class Song(
 ) {
 
     fun play(player: Player) {
-        songMap.play(player)
+        songMap.play(player, songHeader.songTempo)
     }
 
     companion object {

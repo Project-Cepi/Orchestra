@@ -22,14 +22,20 @@ class SongMap {
         map[x]!![y] = note
     }
 
-    fun play(player: Player) {
-        map.entries.forEach { entry ->
-            Manager.scheduler.buildTask {
-                entry.value.values.forEach { note ->
-                    note.playToAudience(player, player.position.x, player.position.y, player.position.z)
-                }
-            }.delay(UpdateOption((entry.key * 100).toLong(), TimeUnit.MILLISECOND)).schedule()
+    fun play(player: Player, tempo: Double) {
+
+        var step = 0
+
+        Manager.scheduler.buildTask {
+            map[step]?.values?.forEach { note ->
+                note.playToAudience(player, player.position.x, player.position.y, player.position.z)
+            }
+
+            step++
         }
+            .repeat(UpdateOption((20 / tempo).toLong(), TimeUnit.TICK))
+            .schedule()
     }
+
 
 }
