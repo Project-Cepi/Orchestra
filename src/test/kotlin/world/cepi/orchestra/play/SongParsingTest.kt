@@ -20,8 +20,6 @@ class SongParsingTest {
         assertEquals(0, header.newFormat)
         assertEquals(5, header.nbsVersion)
         assertEquals("Toby Fox", header.songOriginalAuthor)
-
-        val map = SongNote.mapFromStream(dataInputStream)
     }
 
 }

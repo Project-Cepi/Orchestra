@@ -1,5 +1,7 @@
 package world.cepi.orchestra
 
+import net.kyori.adventure.sound.Sound
+import net.kyori.adventure.sound.SoundStop
 import net.minestom.server.command.builder.Command
 import net.minestom.server.command.builder.arguments.ArgumentType
 import net.minestom.server.entity.Player
@@ -47,6 +49,8 @@ object PlayCommand : Command("orchestra") {
             val player = sender as Player
 
             GlobalSongPlayerManager.remove(player)?.stop()
+
+            player.stopSound(SoundStop.source(Sound.Source.VOICE))
 
             player.sendMessage("Song stopped!")
         }
