@@ -5,13 +5,13 @@ import world.cepi.orchestra.api.data.raw.RawSongHeader
 
 data class SongHeader(
     val nbsVersion: Byte = 5,
-    val songName: String = "Unknown",
-    val songAuthor: String = "Unknown",
-    val songOriginalAuthor: String = "Unknown",
-    val songDescription: String = "A song",
-    val songLength: Short,
+    val name: String = "Unknown",
+    val author: String = "Unknown",
+    val originalAuthor: String = "Unknown",
+    val description: String = "A song",
+    val length: Short,
     /** Tempo measured in ticks per second. */
-    val songTempo: Double,
+    val tempo: Double,
     val timeSignature: Byte,
     val minutesSpent: Int,
     val leftClicks: Int,

@@ -16,15 +16,15 @@ class SongPlayerInstance(
     var tempo: Double = tempo
         set(value) {
             field = value
-            update()
+            resume()
         }
 
     var step = 0
 
     var task: Task? = null
 
-    private fun update() {
-        cancel()
+    fun resume() {
+        stop()
 
         task = Manager.scheduler.buildTask {
             map.map[step]?.values?.forEach { note ->
@@ -37,10 +37,10 @@ class SongPlayerInstance(
             .schedule()
     }
 
-    fun cancel() = task?.cancel()
+    fun stop() = task?.cancel()
 
     init {
-        update()
+        resume()
     }
 
 }

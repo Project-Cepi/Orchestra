@@ -10,12 +10,12 @@ import java.nio.file.Path
 import kotlin.io.path.inputStream
 
 class Song(
-    val songHeader: SongHeader,
-    val songMap: SongMap
+    val header: SongHeader,
+    val map: SongMap
 ) {
 
     fun play(player: Player): SongPlayerInstance =
-        songMap.play(player, songHeader.songTempo)
+        map.play(player, header.tempo)
 
     companion object {
         fun from(path: Path): Song {
