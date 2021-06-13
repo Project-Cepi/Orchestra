@@ -45,7 +45,7 @@ data class SongHeader(
                 rawSongHeader.noteBlocksAdded,
                 rawSongHeader.noteBlocksRemoved,
                 rawSongHeader.midiOrSchematicFileName,
-                rawSongHeader.loop != 0.toByte(),
+                rawSongHeader.loop,
                 rawSongHeader.maxLoopCount,
                 rawSongHeader.loopStartTick
             )

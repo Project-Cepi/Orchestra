@@ -20,7 +20,7 @@ data class RawSongHeader(
     val noteBlocksAdded: Int,
     val noteBlocksRemoved: Int,
     val midiOrSchematicFileName: String,
-    val loop: Byte,
+    val loop: Boolean,
     val maxLoopCount: Byte,
     val loopStartTick: Short
 ) {
