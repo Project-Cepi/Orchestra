@@ -16,7 +16,7 @@ class Song(
 ) {
 
     fun play(player: Player): SongPlayerInstance =
-        map.play(player, header.tempo, customInstruments)
+        map.play(player, header.tempo, customInstruments, layers)
 
     companion object {
         fun from(path: Path): Song {

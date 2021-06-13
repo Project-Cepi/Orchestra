@@ -21,8 +21,13 @@ class SongMap {
         map[x]!![y] = note
     }
 
-    fun play(player: Player, tempo: Double, customInstruments: List<CustomInstrument> = listOf()): SongPlayerInstance {
-        return SongPlayerInstance(this, player, tempo, customInstruments)
+    fun play(
+        player: Player,
+        tempo: Double,
+        customInstruments: List<CustomInstrument> = listOf(),
+        layers: List<SongLayer> = listOf()
+    ): SongPlayerInstance {
+        return SongPlayerInstance(this, player, tempo, customInstruments, layers)
     }
 
 

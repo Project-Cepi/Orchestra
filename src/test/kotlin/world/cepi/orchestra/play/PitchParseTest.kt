@@ -8,11 +8,13 @@ class PitchParseTest {
 
     @Test
     fun `pitches should be read correctly`() {
-        assertEquals(2f, SongNote.noteBlockPitchToMinecraftPitch(57))
+        assertEquals(2f, SongNote.noteBlockKeyToMinecraftPitch(57))
 
-        assertEquals(2f, SongNote.noteBlockPitchToMinecraftPitch(87))
+        assertEquals(2f, SongNote.noteBlockKeyToMinecraftPitch(87))
 
-        assertEquals(.5f, SongNote.noteBlockPitchToMinecraftPitch(33))
+        assertEquals(2f, SongNote.noteBlockKeyToMinecraftPitch(56, 200))
+
+        assertEquals(.5f, SongNote.noteBlockKeyToMinecraftPitch(33))
     }
 
 }

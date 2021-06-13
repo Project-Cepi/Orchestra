@@ -4,6 +4,7 @@ import net.kyori.adventure.audience.Audience
 import net.kyori.adventure.key.Key
 import net.kyori.adventure.sound.Sound
 import net.minestom.server.sound.SoundEvent
+import world.cepi.orchestra.api.data.raw.RawDataStreamGenerator
 import java.io.DataInput
 import kotlin.math.pow
 
@@ -19,9 +20,9 @@ data class SongNote(
     val pitch: Short
 ) {
 
-    fun sound(customIntruments: List<CustomInstrument>): Key {
+    fun sound(customInstruments: List<CustomInstrument>): Key {
         return SongKeyMap[instrument.toInt()]?.key()
-            ?: if (customIntruments.size > instrument - 15) customIntruments[instrument - 15].name else null
+            ?: if (customInstruments.size > instrument - 15) customInstruments[instrument - 15].name else null
             ?: SoundEvent.NOTE_BLOCK_PLING.key()
     }
 
@@ -30,27 +31,31 @@ data class SongNote(
         x: Double,
         y: Double,
         z: Double,
-        customIntruments: List<CustomInstrument>
+        customInstruments: List<CustomInstrument>,
+        layer: SongLayer
     ) {
 
         audience.playSound(
             Sound.sound(
-                sound(customIntruments), Sound.Source.VOICE, volume / 100.toFloat(), noteBlockPitchToMinecraftPitch(key)
+                sound(customInstruments),
+                Sound.Source.VOICE,
+                (layer.volume / 100) * (volume / 100.toFloat()),
+                noteBlockKeyToMinecraftPitch(key)
             ), x, y, z
         )
     }
 
-    companion object {
+    companion object: RawDataStreamGenerator<SongNote>(SongNote::class) {
 
         /**
          * The minimum minecraft-playable note block pitch.
          */
-        const val min = 33.toShort()
+        private const val min = 33.toShort()
 
         /**
          * The maximum minecraft-playable note block pitch.
          */
-        const val max = 57.toShort()
+        private const val max = 57.toShort()
 
         fun mapFromStream(dataStream: DataInput): SongMap {
 
@@ -61,13 +66,7 @@ data class SongNote(
 
                 var layerJump = -1
                 while (dataStream.readShort().also { layerJump += it } != 0.toShort()) {
-                    val note = SongNote(
-                        dataStream.readByte(),
-                        dataStream.readByte(),
-                        dataStream.readByte(),
-                        dataStream.readByte(),
-                        dataStream.readShort()
-                    )
+                    val note = fromDataStream(dataStream)
 
                     map[tickJump, layerJump] = note
                 }
@@ -80,12 +79,12 @@ data class SongNote(
          * Turns a key (0-87, clamped to [min]-[max] for playability purposes)
          * into a minecraft pitch value (0.5f to 2f)
          *
-         * @param pitch The pitch (0-87)
+         * @param key The key (0-87)
          *
          * @return The resulting float with the calculation 2^((pitch - min - 12)/12)
          */
-        fun noteBlockPitchToMinecraftPitch(pitch: Byte): Float {
-            return (2.toDouble().pow(((pitch.coerceIn(min.toByte(), max.toByte()).toDouble() - min) - 12) / 12)).toFloat()
+        fun noteBlockKeyToMinecraftPitch(key: Byte, pitch: Short = 0): Float {
+            return (2.toDouble().pow(((key.coerceIn(min.toByte(), max.toByte()).toDouble() - min) - 12 + (pitch / 200)) / 12)).toFloat()
         }
 
     }
