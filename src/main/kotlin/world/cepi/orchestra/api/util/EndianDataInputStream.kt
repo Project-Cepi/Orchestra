@@ -8,7 +8,7 @@ import java.nio.ByteBuffer
 import java.nio.ByteOrder
 
 /**
- * Simple MichaelBeeu to add endian support to DataInputStream.
+ * Add endian support to DataInputStream.
  * @author michael
  */
 class EndianDataInputStream(stream: InputStream) : InputStream(), DataInput {

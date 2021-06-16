@@ -20,18 +20,25 @@ class Song(
 
     companion object {
         fun from(path: Path): Song {
+
+            // Open the stream and put it in an EndianDataInputStream
             val inputStream = EndianDataInputStream(path.inputStream())
 
+            // Generate the song header from the data stream
             val songHeader = SongHeader.fromRawHeader(RawSongHeader.fromDataStream(inputStream))
 
-            val map = SongNote.mapFromStream(inputStream)
+            // Generate the song map from the stirng
+            val map = SongMap.mapFromStream(inputStream)
 
+            // Map and generate all teh layers
             val layers = (1..songHeader.layerCount).map {
                 SongLayer.fromDataStream(inputStream)
             }
 
+            // Get the amount of custom instruments
             val customInstrumentAmount = inputStream.readByte()
 
+            // Map and generate the custom instruments
             val customInstruments = (1..customInstrumentAmount).map {
                 CustomInstrument.fromRawCustomInstrument(RawCustomInstrument.fromDataStream(inputStream))
             }

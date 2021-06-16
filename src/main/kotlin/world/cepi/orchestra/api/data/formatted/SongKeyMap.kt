@@ -2,7 +2,7 @@ package world.cepi.orchestra.api.data.formatted
 
 import net.kyori.adventure.key.Key
 
-object SongKeyMap {
+internal object SongKeyMap {
 
     private val map = arrayOf(
         Key.key("minecraft:block.note_block.harp"),

@@ -20,18 +20,35 @@ data class SongNote(
     val pitch: Short
 ) {
 
-    fun sound(customInstruments: List<CustomInstrument>): Key {
+    /**
+     * Gets the [Key] to be played to the player
+     *
+     * @param customInstruments The custom instruments to look at if the index goes over the normal notes
+     *
+     * @return the [Key] to be played to the player.
+     */
+    private fun sound(customInstruments: List<CustomInstrument> = listOf()): Key {
         return SongKeyMap[instrument.toInt()]
             ?: if (customInstruments.size > instrument - 15) customInstruments[instrument - 15].name else null
             ?: SoundEvent.NOTE_BLOCK_PLING.key()
     }
 
+    /**
+     * Plays this note to an audience.
+     *
+     * @param audience The audience to play it to.
+     * @param x The x coordinate to play the note at
+     * @param y The y coordinate to play the note at
+     * @param z The z coordinate to play the note at
+     * @param customInstruments The custom instruments this note needs, if any
+     * @param layer The layer this note is playing on.
+     */
     fun playToAudience(
         audience: Audience,
         x: Double,
         y: Double,
         z: Double,
-        customInstruments: List<CustomInstrument>,
+        customInstruments: List<CustomInstrument> = listOf(),
         layer: SongLayer
     ) {
 
@@ -56,24 +73,6 @@ data class SongNote(
          * The maximum minecraft-playable note block pitch.
          */
         private const val max = 57.toShort()
-
-        fun mapFromStream(dataStream: DataInput): SongMap {
-
-            val map = SongMap()
-
-            var tickJump = -1
-            while (dataStream.readShort().also { tickJump += it } != 0.toShort()) {
-
-                var layerJump = -1
-                while (dataStream.readShort().also { layerJump += it } != 0.toShort()) {
-                    val note = fromDataStream(dataStream)
-
-                    map[tickJump, layerJump] = note
-                }
-            }
-
-            return map
-        }
 
         /**
          * Turns a key (0-87, clamped to [min]-[max] for playability purposes)
