@@ -29,8 +29,6 @@ $dokka.location:world.cepi.orchestra.api.data.formatted/SongHeader/originalAutho
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongHeader/rightClicks/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-header/right-clicks.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongHeader/tempo/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-header/tempo.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongHeader/timeSignature/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-header/time-signature.html
-$dokka.location:world.cepi.orchestra.api.data.formatted/SongKeyMap///PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-key-map/index.html
-$dokka.location:world.cepi.orchestra.api.data.formatted/SongKeyMap/get/#kotlin.Int/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-key-map/get.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongLayer.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-layer/-companion/index.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongLayer///PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-layer/index.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongLayer/SongLayer/#kotlin.String#kotlin.Byte#kotlin.Byte#kotlin.Byte/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-layer/-song-layer.html
@@ -38,6 +36,8 @@ $dokka.location:world.cepi.orchestra.api.data.formatted/SongLayer/lock/#/Pointin
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongLayer/name/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-layer/name.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongLayer/stereo/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-layer/stereo.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongLayer/volume/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-layer/volume.html
+$dokka.location:world.cepi.orchestra.api.data.formatted/SongMap.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-map/-companion/index.html
+$dokka.location:world.cepi.orchestra.api.data.formatted/SongMap.Companion/mapFromStream/#java.io.DataInput/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-map/-companion/map-from-stream.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongMap///PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-map/index.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongMap/SongMap/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-map/-song-map.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongMap/get/#kotlin.Int#kotlin.Int/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-map/get.html
@@ -45,7 +45,6 @@ $dokka.location:world.cepi.orchestra.api.data.formatted/SongMap/map/#/PointingTo
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongMap/play/#net.minestom.server.entity.Player#kotlin.Double#kotlin.collections.List[world.cepi.orchestra.api.data.formatted.CustomInstrument]#kotlin.collections.List[world.cepi.orchestra.api.data.formatted.SongLayer]/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-map/play.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongMap/set/#kotlin.Int#kotlin.Int#world.cepi.orchestra.api.data.formatted.SongNote/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-map/set.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongNote.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-note/-companion/index.html
-$dokka.location:world.cepi.orchestra.api.data.formatted/SongNote.Companion/mapFromStream/#java.io.DataInput/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-note/-companion/map-from-stream.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongNote.Companion/noteBlockKeyToMinecraftPitch/#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-note/-companion/note-block-key-to-minecraft-pitch.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongNote///PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-note/index.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongNote/SongNote/#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Byte#kotlin.Short/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-note/-song-note.html
@@ -54,7 +53,6 @@ $dokka.location:world.cepi.orchestra.api.data.formatted/SongNote/key/#/PointingT
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongNote/panning/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-note/panning.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongNote/pitch/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-note/pitch.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongNote/playToAudience/#net.kyori.adventure.audience.Audience#kotlin.Double#kotlin.Double#kotlin.Double#kotlin.collections.List[world.cepi.orchestra.api.data.formatted.CustomInstrument]#world.cepi.orchestra.api.data.formatted.SongLayer/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-note/play-to-audience.html
-$dokka.location:world.cepi.orchestra.api.data.formatted/SongNote/sound/#kotlin.collections.List[world.cepi.orchestra.api.data.formatted.CustomInstrument]/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-note/sound.html
 $dokka.location:world.cepi.orchestra.api.data.formatted/SongNote/volume/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.formatted/-song-note/volume.html
 $dokka.location:world.cepi.orchestra.api.data.raw////PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.raw/index.html
 $dokka.location:world.cepi.orchestra.api.data.raw/RawCustomInstrument.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra.api.data.raw/-raw-custom-instrument/-companion/index.html
