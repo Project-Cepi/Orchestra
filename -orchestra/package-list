@@ -124,8 +124,8 @@ $dokka.location:world.cepi.orchestra.api.util/EndianDataInputStream/readUnsigned
 $dokka.location:world.cepi.orchestra.api.util/EndianDataInputStream/reset/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.util/-endian-data-input-stream/reset.html
 $dokka.location:world.cepi.orchestra.api.util/EndianDataInputStream/skipBytes/#kotlin.Int/PointingToDeclaration/-orchestra/world.cepi.orchestra.api.util/-endian-data-input-stream/skip-bytes.html
 $dokka.location:world.cepi.orchestra.api////PointingToDeclaration/-orchestra/world.cepi.orchestra.api/index.html
-$dokka.location:world.cepi.orchestra.api/OldSongError///PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-old-song-error/index.html
-$dokka.location:world.cepi.orchestra.api/OldSongError/OldSongError/#kotlin.String/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-old-song-error/-old-song-error.html
+$dokka.location:world.cepi.orchestra.api/OldSongException///PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-old-song-exception/index.html
+$dokka.location:world.cepi.orchestra.api/OldSongException/OldSongException/#kotlin.String/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-old-song-exception/-old-song-exception.html
 $dokka.location:world.cepi.orchestra.api/Song.Companion///PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song/-companion/index.html
 $dokka.location:world.cepi.orchestra.api/Song.Companion/from/#java.nio.file.Path/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song/-companion/from.html
 $dokka.location:world.cepi.orchestra.api/Song///PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song/index.html
