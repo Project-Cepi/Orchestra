@@ -1,29 +1,29 @@
 package world.cepi.orchestra.api.data.formatted
 
-import net.minestom.server.sound.SoundEvent
+import net.kyori.adventure.key.Key
 
 object SongKeyMap {
 
     private val map = arrayOf(
-        SoundEvent.NOTE_BLOCK_HARP,
-        SoundEvent.NOTE_BLOCK_BASS,
-        SoundEvent.NOTE_BLOCK_BASEDRUM,
-        SoundEvent.NOTE_BLOCK_SNARE,
-        SoundEvent.NOTE_BLOCK_HAT,
-        SoundEvent.NOTE_BLOCK_GUITAR,
-        SoundEvent.NOTE_BLOCK_FLUTE,
-        SoundEvent.NOTE_BLOCK_BELL,
-        SoundEvent.NOTE_BLOCK_CHIME,
-        SoundEvent.NOTE_BLOCK_XYLOPHONE,
-        SoundEvent.NOTE_BLOCK_IRON_XYLOPHONE,
-        SoundEvent.NOTE_BLOCK_COW_BELL,
-        SoundEvent.NOTE_BLOCK_DIDGERIDOO,
-        SoundEvent.NOTE_BLOCK_BIT,
-        SoundEvent.NOTE_BLOCK_BANJO,
-        SoundEvent.NOTE_BLOCK_PLING
+        Key.key("minecraft:block.note_block.harp"),
+        Key.key("minecraft:note_block_bass"),
+        Key.key("minecraft:note_block_basedrum"),
+        Key.key("minecraft:note_block_snare"),
+        Key.key("minecraft:note_block_hat"),
+        Key.key("minecraft:note_block_guitar"),
+        Key.key("minecraft:note_block_flute"),
+        Key.key("minecraft:note_block_bell"),
+        Key.key("minecraft:note_block_chime"),
+        Key.key("minecraft:note_block_xylophone"),
+        Key.key("minecraft:note_block_iron_xylophone"),
+        Key.key("minecraft:note_block_cow_bell"),
+        Key.key("minecraft:note_block_didgeridoo"),
+        Key.key("minecraft:note_block_bit"),
+        Key.key("minecraft:note_block_banjo"),
+        Key.key("minecraft:note_block_pling")
     )
 
-    operator fun get(index: Int): SoundEvent? {
+    operator fun get(index: Int): Key? {
         if (index < 0) return null
 
         if (index >= map.size) return null

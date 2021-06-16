@@ -1,6 +1,6 @@
 package world.cepi.orchestra.api.data.formatted
 
-import world.cepi.orchestra.api.OldSongError
+import world.cepi.orchestra.api.OldSongException
 import world.cepi.orchestra.api.data.raw.RawSongHeader
 
 data class SongHeader(
@@ -27,7 +27,7 @@ data class SongHeader(
     companion object {
         fun fromRawHeader(rawSongHeader: RawSongHeader): SongHeader {
             if (rawSongHeader.newFormat != 0.toShort())
-                throw OldSongError("This song is using the old NBS format!")
+                throw OldSongException("This song is using the old NBS format!")
 
             return SongHeader(
                 rawSongHeader.nbsVersion,
