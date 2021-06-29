@@ -1,4 +1,4 @@
-package world.cepi.orchestra
+package world.cepi.orchestra.command
 
 import net.kyori.adventure.sound.Sound
 import net.kyori.adventure.sound.SoundStop
@@ -7,6 +7,8 @@ import net.minestom.server.command.builder.arguments.ArgumentType
 import net.minestom.server.entity.Player
 import world.cepi.kstom.command.addSyntax
 import world.cepi.kstom.command.arguments.literal
+import world.cepi.orchestra.GlobalSongPlayerManager
+import world.cepi.orchestra.Orchestra
 import world.cepi.orchestra.api.Song
 import kotlin.io.path.exists
 
@@ -24,9 +26,9 @@ object PlayCommand : Command("orchestra") {
 
         val songName = ArgumentType.Word("songName")
 
-        addSyntax(play, songName) { sender, args ->
+        addSyntax(play, songName) {
             val player = sender as Player
-            val file = Orchestra.folderDir.resolve("${args[songName]}.nbs")
+            val file = Orchestra.folderDir.resolve("${context[songName]}.nbs")
             if (file.exists()) {
 
                 // TODO should probably cache this
@@ -44,7 +46,7 @@ object PlayCommand : Command("orchestra") {
             }
         }
 
-        addSyntax(stop) { sender ->
+        addSyntax(stop) {
 
             val player = sender as Player
 
@@ -55,7 +57,7 @@ object PlayCommand : Command("orchestra") {
             player.sendMessage("Song stopped!")
         }
 
-        addSyntax(pause) { sender ->
+        addSyntax(pause) {
             val player = sender as Player
 
             GlobalSongPlayerManager[player]?.stop()
@@ -63,7 +65,7 @@ object PlayCommand : Command("orchestra") {
             player.sendMessage("Song paused!")
         }
 
-        addSyntax(resume) { sender ->
+        addSyntax(resume) {
             val player = sender as Player
 
             GlobalSongPlayerManager[player]?.resume()
@@ -71,10 +73,10 @@ object PlayCommand : Command("orchestra") {
             player.sendMessage("Song resumed!")
         }
 
-        addSyntax(tempoLiteral, tempo) { sender, args ->
+        addSyntax(tempoLiteral, tempo) {
             val player = sender as Player
 
-            GlobalSongPlayerManager[player]?.tempo = args[tempo]
+            GlobalSongPlayerManager[player]?.tempo = context[tempo]
         }
     }
 }
