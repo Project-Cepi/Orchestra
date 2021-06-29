@@ -32,7 +32,7 @@ dependencies {
     compileOnly(kotlin("reflect"))
 
     // Compile Minestom into project
-    compileOnly("com.github.Project-Cepi:Minestom:73abe7a4d7")
+    compileOnly("com.github.Minestom:Minestom:fbb8c1a819")
 
     // Get KStom
     compileOnly("com.github.Project-Cepi:KStom:41caee6491")
@@ -45,6 +45,9 @@ dependencies {
 
     // Use the JUpiter test library.
     testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
+
+    // Add Kepi
+    compileOnly("com.github.Project-Cepi:Kepi:9ed8b195ea")
 }
 
 tasks.withType<Test> {

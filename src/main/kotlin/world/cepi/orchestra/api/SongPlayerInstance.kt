@@ -9,6 +9,7 @@ import world.cepi.kstom.util.component1
 import world.cepi.kstom.util.component2
 import world.cepi.kstom.util.component3
 import world.cepi.orchestra.api.data.formatted.CustomInstrument
+import world.cepi.orchestra.api.data.formatted.SongHeader
 import world.cepi.orchestra.api.data.formatted.SongLayer
 import world.cepi.orchestra.api.data.formatted.SongMap
 
@@ -17,7 +18,8 @@ class SongPlayerInstance(
     val player: Player,
     tempo: Double,
     val customInstruments: List<CustomInstrument> = listOf(),
-    val layers: List<SongLayer> = listOf()
+    val layers: List<SongLayer> = listOf(),
+    val header: SongHeader
 ) {
 
     var tempo: Double = tempo

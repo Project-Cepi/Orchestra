@@ -26,9 +26,10 @@ class SongMap {
         player: Player,
         tempo: Double,
         customInstruments: List<CustomInstrument> = listOf(),
-        layers: List<SongLayer> = listOf()
+        layers: List<SongLayer> = listOf(),
+        header: SongHeader
     ): SongPlayerInstance {
-        return SongPlayerInstance(this, player, tempo, customInstruments, layers)
+        return SongPlayerInstance(this, player, tempo, customInstruments, layers, header)
     }
 
     companion object {

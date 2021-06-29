@@ -2,9 +2,12 @@ package world.cepi.orchestra.command
 
 import net.kyori.adventure.sound.Sound
 import net.kyori.adventure.sound.SoundStop
+import net.kyori.adventure.text.Component
+import net.kyori.adventure.text.format.NamedTextColor
 import net.minestom.server.command.builder.Command
 import net.minestom.server.command.builder.arguments.ArgumentType
 import net.minestom.server.entity.Player
+import world.cepi.kepi.messages.sendFormattedTranslatableMessage
 import world.cepi.kstom.command.addSyntax
 import world.cepi.kstom.command.arguments.literal
 import world.cepi.orchestra.GlobalSongPlayerManager
@@ -40,9 +43,13 @@ object PlayCommand : Command("orchestra") {
 
                 GlobalSongPlayerManager[player] = instance
 
-                player.sendMessage("Now playing: ${header.name} by ${header.author}")
+                player.sendFormattedTranslatableMessage(
+                    "orchestra", "play.now",
+                    Component.text(header.name, NamedTextColor.BLUE),
+                    Component.text(header.author, NamedTextColor.BLUE)
+                )
             } else {
-                player.sendMessage("That file does not exist!")
+                player.sendFormattedTranslatableMessage("orchestra", "none", Component.text(context[songName], NamedTextColor.BLUE))
             }
         }
 
@@ -50,27 +57,48 @@ object PlayCommand : Command("orchestra") {
 
             val player = sender as Player
 
-            GlobalSongPlayerManager.remove(player)?.stop()
+            val song = GlobalSongPlayerManager.remove(player)
+
+            if (song == null) {
+                player.sendFormattedTranslatableMessage("orchestra", "play.none")
+                return@addSyntax
+            }
+
+            song.stop()
 
             player.stopSound(SoundStop.source(Sound.Source.VOICE))
 
-            player.sendMessage("Song stopped!")
+            player.sendFormattedTranslatableMessage("orchestra", "stop", Component.text(song.header.name, NamedTextColor.BLUE))
         }
 
         addSyntax(pause) {
             val player = sender as Player
 
-            GlobalSongPlayerManager[player]?.stop()
+            val song = GlobalSongPlayerManager[player]
 
-            player.sendMessage("Song paused!")
+            if (song == null) {
+                player.sendFormattedTranslatableMessage("orchestra", "play.none")
+                return@addSyntax
+            }
+
+            song.stop()
+
+            player.sendFormattedTranslatableMessage("orchestra", "pause", Component.text(song.header.name, NamedTextColor.BLUE))
         }
 
         addSyntax(resume) {
             val player = sender as Player
 
-            GlobalSongPlayerManager[player]?.resume()
+            val song = GlobalSongPlayerManager[player]
 
-            player.sendMessage("Song resumed!")
+            if (song == null) {
+                player.sendFormattedTranslatableMessage("orchestra", "play.none")
+                return@addSyntax
+            }
+
+            song.resume()
+
+            player.sendFormattedTranslatableMessage("orchestra", "resume", Component.text(song.header.name, NamedTextColor.BLUE))
         }
 
         addSyntax(tempoLiteral, tempo) {
