@@ -19,21 +19,21 @@ object PlaySoundCommand : Command("playsound") {
 
         val sound = ArgumentSound("sound")
 
-        val volume = ArgumentType.FloatRange("volume").setDefaultValue(FloatRange(1f, 1f)).map {
+        val volume = ArgumentType.FloatRange("volume").map {
 
             if (it.minimum == it.maximum)
                 return@map it.minimum
 
             Random.Default.nextDouble(it.minimum.toDouble(), it.maximum.toDouble()).toFloat()
-        }
+        }.setDefaultValue(1f)
 
-        val pitch = ArgumentType.FloatRange("pitch").setDefaultValue(FloatRange(1f, 1f)).map {
+        val pitch = ArgumentType.FloatRange("pitch").map {
 
             if (it.minimum == it.maximum)
                 return@map it.minimum
 
             Random.Default.nextDouble(it.minimum.toDouble(), it.maximum.toDouble()).toFloat()
-        }
+        }.setDefaultValue(1f)
 
         val targets = ArgumentType.Entity("target").setDefaultValue {
             EntityFinder().apply {
