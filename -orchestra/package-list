@@ -146,6 +146,11 @@ $dokka.location:world.cepi.orchestra.api/SongPlayerInstance/stop/#/PointingToDec
 $dokka.location:world.cepi.orchestra.api/SongPlayerInstance/task/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song-player-instance/task.html
 $dokka.location:world.cepi.orchestra.api/SongPlayerInstance/tempo/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.api/-song-player-instance/tempo.html
 $dokka.location:world.cepi.orchestra.command////PointingToDeclaration/-orchestra/world.cepi.orchestra.command/index.html
+$dokka.location:world.cepi.orchestra.command/ArgumentSound///PointingToDeclaration/-orchestra/world.cepi.orchestra.command/-argument-sound/index.html
+$dokka.location:world.cepi.orchestra.command/ArgumentSound/ArgumentSound/#kotlin.String?/PointingToDeclaration/-orchestra/world.cepi.orchestra.command/-argument-sound/-argument-sound.html
+$dokka.location:world.cepi.orchestra.command/ArgumentSound/getRegistry/#kotlin.String/PointingToDeclaration/-orchestra/world.cepi.orchestra.command/-argument-sound/get-registry.html
+$dokka.location:world.cepi.orchestra.command/ArgumentSound/processNodes/#net.minestom.server.command.builder.NodeMaker#kotlin.Boolean/PointingToDeclaration/-orchestra/world.cepi.orchestra.command/-argument-sound/process-nodes.html
+$dokka.location:world.cepi.orchestra.command/ArgumentSound/toString/#/PointingToDeclaration/-orchestra/world.cepi.orchestra.command/-argument-sound/to-string.html
 $dokka.location:world.cepi.orchestra.command/PlayCommand///PointingToDeclaration/-orchestra/world.cepi.orchestra.command/-play-command/index.html
 $dokka.location:world.cepi.orchestra.command/PlaySoundCommand///PointingToDeclaration/-orchestra/world.cepi.orchestra.command/-play-sound-command/index.html
 $dokka.location:world.cepi.orchestra////PointingToDeclaration/-orchestra/world.cepi.orchestra/index.html
