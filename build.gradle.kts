@@ -41,13 +41,10 @@ dependencies {
     compileOnly("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
 
     // Add Kepi
-    compileOnly("com.github.Project-Cepi:Kepi:c6ed2d6884")
+    compileOnly("com.github.Project-Cepi:Kepi:c31304d5dd")
 
     // Use the JUpiter test library.
     testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
-
-    // Add Kepi
-    compileOnly("com.github.Project-Cepi:Kepi:9ed8b195ea")
 }
 
 tasks.withType<Test> {

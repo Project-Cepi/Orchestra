@@ -1,5 +1,12 @@
 {
   "entrypoint": "world.cepi.orchestra.Orchestra",
   "name": "Orchestra",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "dependencies": [
+    "KStom",
+    "Kepi"
+  ],
+  "meta": {
+    "downloadURL": "https://github.com/Project-Cepi/Orchestra/releases/download/latest/orchestra-all.jar"
+  }
 }
