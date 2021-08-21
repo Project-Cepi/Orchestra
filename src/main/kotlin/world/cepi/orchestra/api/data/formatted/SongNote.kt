@@ -30,7 +30,7 @@ data class SongNote(
     private fun sound(customInstruments: List<CustomInstrument> = listOf()): Key {
         return SongKeyMap[instrument.toInt()]
             ?: if (customInstruments.size > instrument - 15) customInstruments[instrument - 15].name else null
-            ?: SoundEvent.NOTE_BLOCK_PLING.key()
+            ?: SoundEvent.BLOCK_NOTE_BLOCK_PLING.key()
     }
 
     /**

@@ -3,7 +3,6 @@ package world.cepi.orchestra.api
 import net.minestom.server.entity.Player
 import net.minestom.server.timer.Task
 import net.minestom.server.utils.time.TimeUnit
-import net.minestom.server.utils.time.UpdateOption
 import world.cepi.kstom.Manager
 import world.cepi.kstom.util.component1
 import world.cepi.kstom.util.component2
@@ -12,6 +11,7 @@ import world.cepi.orchestra.api.data.formatted.CustomInstrument
 import world.cepi.orchestra.api.data.formatted.SongHeader
 import world.cepi.orchestra.api.data.formatted.SongLayer
 import world.cepi.orchestra.api.data.formatted.SongMap
+import java.time.Duration
 
 class SongPlayerInstance(
     val map: SongMap,
@@ -50,7 +50,7 @@ class SongPlayerInstance(
 
             step++
         }
-            .repeat(UpdateOption((20 / tempo).toLong(), TimeUnit.TICK))
+            .repeat(Duration.of((20 / tempo).toLong(), TimeUnit.SERVER_TICK))
             .schedule()
     }
 

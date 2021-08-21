@@ -7,13 +7,14 @@ import net.minestom.server.command.builder.arguments.minecraft.SuggestionType
 import net.minestom.server.command.builder.arguments.minecraft.registry.ArgumentRegistry
 import net.minestom.server.network.packet.server.play.DeclareCommandsPacket
 import net.minestom.server.registry.Registries
+import net.minestom.server.sound.SoundEvent
 
 /**
  * Represents an argument giving an [Sound.Type].
  */
 class ArgumentSound(id: String?) : ArgumentRegistry<Sound.Type>(id) {
     override fun getRegistry(value: String): Sound.Type {
-        return Registries.getSoundEvent(value)
+        return SoundEvent.fromNamespaceId(value)
             ?: return Sound.Type { Key.key(value) } // Instance of Sound.Type
     }
 
