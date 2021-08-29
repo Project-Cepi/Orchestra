@@ -9,6 +9,7 @@ import net.minestom.server.entity.Player
 import net.minestom.server.utils.entity.EntityFinder
 import net.minestom.server.utils.location.RelativeVec
 import world.cepi.kstom.command.addSyntax
+import world.cepi.kstom.command.arguments.ArgumentSound
 import kotlin.random.Random
 
 object PlaySoundCommand : Command("playsound") {
