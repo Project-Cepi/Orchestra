@@ -5,6 +5,7 @@ import net.kyori.adventure.text.event.ClickEvent
 import net.kyori.adventure.text.format.NamedTextColor
 import net.minestom.server.command.builder.arguments.ArgumentType
 import net.minestom.server.sound.SoundEvent
+import world.cepi.kepi.messages.sendFormattedTranslatableMessage
 import world.cepi.kstom.command.kommand.Kommand
 
 object FindSoundCommand : Kommand({
@@ -17,10 +18,14 @@ object FindSoundCommand : Kommand({
         }
 
         if (filteredSounds.isEmpty()) {
-
+            sender.sendFormattedTranslatableMessage("orchestra", "sound.found.none")
             return@syntax
         }
 
+        sender.sendFormattedTranslatableMessage(
+            "orchestra", "sound.found",
+            Component.text(filteredSounds.size, NamedTextColor.BLUE)
+        )
         filteredSounds.forEach {
             sender.sendMessage(
                 Component.text(it.name(), NamedTextColor.GRAY)
