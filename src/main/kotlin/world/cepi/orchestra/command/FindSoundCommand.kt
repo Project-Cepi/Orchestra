@@ -11,10 +11,17 @@ object FindSoundCommand : Kommand({
     val partialSound = ArgumentType.String("partialSound")
 
     syntax(partialSound) {
-        SoundEvent.values().filter {
+        val filteredSounds = SoundEvent.values().filter {
             it.name().lowercase()
                 .contains((!partialSound).lowercase())
-        }.map {
+        }
+
+        if (filteredSounds.isEmpty()) {
+
+            return@syntax
+        }
+
+        filteredSounds.forEach {
             sender.sendMessage(
                 Component.text(it.name(), NamedTextColor.GRAY)
                     .clickEvent(ClickEvent.suggestCommand("/playsound ${it.name()}"))
