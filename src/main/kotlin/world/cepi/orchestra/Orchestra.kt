@@ -3,6 +3,7 @@ package world.cepi.orchestra
 import net.minestom.server.extensions.Extension;
 import world.cepi.kstom.command.register
 import world.cepi.kstom.command.unregister
+import world.cepi.kstom.util.log
 import world.cepi.orchestra.command.FindSoundCommand
 import world.cepi.orchestra.command.PlayCommand
 import world.cepi.orchestra.command.PlaySoundCommand
@@ -12,7 +13,7 @@ import kotlin.io.path.exists
 
 class Orchestra : Extension() {
 
-    override fun initialize() {
+    override fun initialize(): LoadStatus {
         PlayCommand.register()
         PlaySoundCommand.register()
         FindSoundCommand.register()
@@ -20,7 +21,9 @@ class Orchestra : Extension() {
         val file = folderDir
         if (!file.exists())
             file.createDirectories()
-        logger.info("[Orchestra] has been enabled!")
+        log.info("[Orchestra] has been enabled!")
+
+        return LoadStatus.SUCCESS
     }
 
     override fun terminate() {
@@ -28,7 +31,7 @@ class Orchestra : Extension() {
         PlaySoundCommand.unregister()
         FindSoundCommand.unregister()
 
-        logger.info("[Orchestra] has been disabled!")
+        log.info("[Orchestra] has been disabled!")
     }
 
     companion object {
