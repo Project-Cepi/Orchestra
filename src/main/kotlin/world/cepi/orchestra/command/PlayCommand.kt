@@ -25,7 +25,7 @@ object PlayCommand : Kommand({
 
     val songName = ArgumentType.Word("songName")
 
-    syntax(play, songName).onlyPlayers {
+    syntax(play, songName) {
         val file = Orchestra.folderDir.resolve("${context[songName]}.nbs")
         if (file.exists()) {
 
@@ -46,15 +46,15 @@ object PlayCommand : Kommand({
         } else {
             player.sendFormattedTranslatableMessage("orchestra", "none", Component.text(context[songName], NamedTextColor.BLUE))
         }
-    }
+    }.onlyPlayers()
 
-    syntax(stop).onlyPlayers {
+    syntax(stop) {
 
         val song = GlobalSongPlayerManager.remove(player)
 
         if (song == null) {
             player.sendFormattedTranslatableMessage("orchestra", "play.none")
-            return@onlyPlayers
+            return@syntax
         }
 
         song.stop()
@@ -62,36 +62,36 @@ object PlayCommand : Kommand({
         player.stopSound(SoundStop.source(Sound.Source.VOICE))
 
         player.sendFormattedTranslatableMessage("orchestra", "stop", Component.text(song.header.name, NamedTextColor.BLUE))
-    }
+    }.onlyPlayers()
 
-    syntax(pause).onlyPlayers {
+    syntax(pause) {
 
         val song = GlobalSongPlayerManager[player]
 
         if (song == null) {
             player.sendFormattedTranslatableMessage("orchestra", "play.none")
-            return@onlyPlayers
+            return@syntax
         }
 
         song.stop()
 
         player.sendFormattedTranslatableMessage("orchestra", "pause", Component.text(song.header.name, NamedTextColor.BLUE))
-    }
+    }.onlyPlayers()
 
-    syntax(resume).onlyPlayers {
+    syntax(resume) {
         val song = GlobalSongPlayerManager[player]
 
         if (song == null) {
             player.sendFormattedTranslatableMessage("orchestra", "play.none")
-            return@onlyPlayers
+            return@syntax
         }
 
         song.resume()
 
         player.sendFormattedTranslatableMessage("orchestra", "resume", Component.text(song.header.name, NamedTextColor.BLUE))
-    }
+    }.onlyPlayers()
 
-    syntax(tempoLiteral, tempo).onlyPlayers {
+    syntax(tempoLiteral, tempo) {
         GlobalSongPlayerManager[player]?.tempo = !tempo
-    }
+    }.onlyPlayers()
 }, "orchestra")
